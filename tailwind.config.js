@@ -1,12 +1,13 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
-module.exports = {
-  theme: {
+export default {
+    theme: {
     extend: {
-      fontFamily: {
-        sans: ['InterVariable', '...defaultTheme.fontFamily.sans'],
-      },
+        colors: {
+            primarybtn: '#ABEF5F',
+        },
+        fontFamily: {
+        'sans': ['Helvetica', 'Arial', 'sans-serif'],
+        },
     },
-  },
-  // ...
+    },
+    plugins: [],
 }

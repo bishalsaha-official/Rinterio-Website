@@ -11,13 +11,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <style>
-        .manrope-font {
-            font-family: "Manrope", serif;
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5483c4ea27.js" crossorigin="anonymous"></script>
+    <!-- Tailwind Config Script -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                bg_main: '#f4f4f4',
+                btn_bg_primary: '#ABEF5F',
+                title_primary: '#212121',
+                title_secondary: '#494949',
+                description: '#494949'
+              },
+              fontFamily: {
+                manrope: '"Manrope", serif'
+              }
+            }
+          }
         }
-    </style>
+      </script>
 </head>
-<body class="manrope-font">
+<body class="font-[manrope]">
     <!-- Header Section -->
     <header class="bg-[#ffffff]">
         <!-- Navbar Part -->
@@ -34,9 +51,9 @@
                         <li><a>Blogs</a></li>
                         <li><a>Contact Us</a></li>
                     </ul>
-                  <a class="btn bg-primary-btn">Book Consult</a>
+                  <a class="px-5 py-4 font-bold bg-[#ABEF5F] rounded-full">Book Consult</a>
                   <!-- Dropdown -->
-                  <div class="dropdown">
+                  <!-- <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -58,25 +75,49 @@
                         <li><a>Blogs</a></li>
                         <li><a>Contact Us</a></li>
                     </ul>
-                  </div>
+                  </div> -->
                 </div>
               </div>
         </nav>
         <!-- Banner Part -->
-        <div class="hero">
-            <div class="hero-content text-center">
-              <div class="max-w-5xl mx-auto">
-                <img src="images/banner.png" class="max-w-lg mx-auto mb-10" alt="">
-                <h1 class="text-6xl font-bold text-[#212121] mb-6">A barn house of this design has a striking appearance</h1>
-                <p class="max-w-3xl mx-auto text-[#494949] mb-4">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                <button class="px-5 py-4 font-bold bg-[#ABEF5F] rounded-full">View Details</button>
-              </div>
-            </div>
-          </div>
+        <div class="max-w-5xl mx-auto text-center">
+            <img src="images/banner.png" class="max-w-lg mx-auto mb-10" alt="">
+            <h1 class="text-6xl font-bold text-[#212121] mb-6">A barn house of this design has a striking appearance</h1>
+            <p class="max-w-3xl mx-auto text-[#494949] mb-4">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <button class="px-5 py-4 font-bold bg-[#ABEF5F] rounded-full">View Details</button>
+        </div>
     </header>
 
     <!-- Main Section -->
-    <main>
+    <main class="bg-bg_main">
+        <!-- About Us Section -->
+        <section class="max-w-6xl mx-auto grid grid-cols-2 gap-9 py-16">
+            <!-- About Us Text Content -->
+            <div>
+                <img src="images/Vector.png" alt="">
+                <h4 class="text-title_secondary"><span><i class="fa-solid fa-arrow-right"></i></span>About Us</h4>
+                <h2 class="text-title_primary font-bold text-4xl my-8">We design thoughtful, liveable spaces</h2>
+                <p class="mb-9 text-description">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+                <div class="flex items-center gap-6 py-7 px-7 bg-white rounded-2xl mb-5">
+                    <img src="images/commercial.png" alt="">
+                    <div>
+                        <h3 class="text-title_secondary font-bold text-xl mb-3">Commercial</h3>
+                        <p class="text-description">The barn house captivates with its blend of rustic charm and modern.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 py-7 px-7 bg-white rounded-2xl">
+                    <img src="images/commercial.png" alt="">
+                    <div>
+                        <h3 class="text-title_secondary font-bold text-xl mb-3">Commercial</h3>
+                        <p class="text-description">The barn house captivates with its blend of rustic charm and modern.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- About Us Img Content -->
+            <div>
+                <img class="w-full object-cover" src="images/Rectangle.png" alt="">
+            </div>
+        </section>
     </main>
 
     <!-- Footer Section -->
